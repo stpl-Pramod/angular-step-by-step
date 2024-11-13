@@ -29,3 +29,77 @@ events
 <input type="text" name="user name" value="{{name}}" disabled="{{disabled}}" /> -->
 
 <!-- sbs- 14 if else -->
+<!-- <div *ngIf="show; else elsePart">
+  <p>if true</p>
+</div>
+<ng-template #elsePart>
+  <p>if false</p>
+</ng-template> -->
+
+<!-- sbs- 17, 18, 19 loop -->
+<!-- <div [ngSwitch]="color">
+  <h5 *ngSwitchCase="'red'">Red</h5>
+  <h5 *ngSwitchCase="'black'">black</h5>
+</div>
+<ul>
+  <li *ngFor="let u of users">{{u}}</li>
+</ul>
+<table border="1">
+  <tr>
+    <th>UserName</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th colspan="3">Address</th>
+  </tr>
+  <tr *ngFor="let i of userDetails">
+    <td [ngStyle]="{'background':i.username=='ajay'?'blue':'yellow', 'color':i.username=='ajay'?'white':'black'} ">{{i.username}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.phone}}</td>
+    <td>{{i.address.plot}}</td>
+    <td>{{i.address.city}}</td>
+    <td [ngClass]="i.address.district=='Pune'?'text-danger':'text-success'">{{i.address.district}}</td>
+  </tr>
+</table> -->
+
+<!-- sbs- 20 style binding -->
+<!-- <p [style.color]="color">if true</p>
+<button (click)="updateStyle()">update color</button> -->
+
+<!-- sbs- 21 form -->
+ <!-- <form #basicForm="ngForm" (submit)="getFormData(basicForm.value)">
+  <input type="text" placeholder="name" name="name" ngModel />
+  <input type="text" placeholder="email" name="email" ngModel />
+  <input type="text" placeholder="phone" name="phone" ngModel />
+  <button type="submit">submit</button>
+ </form>
+<ul>
+  <li>{{userData.name}}</li>
+  <li>{{userData.email}}</li>
+  <li>{{userData.phone}}</li>
+</ul> -->
+
+<!-- sbs- 22 toggle data -->
+<!-- <button (click)="toggleData()">toggle</button>
+<p *ngIf="show">if true</p> -->
+
+<!-- sbs- 25 todo list -->
+<!-- <form #todoForm="ngForm" (submit)="getTodoData(todoForm.value)">
+  <input type="text" placeholder="name" name="name" ngModel />
+  <button type="submit">submit</button>
+ </form>
+ <ul>
+  <li *ngFor="let i of todoList; let l=index">{{i.name}} 
+    <button type="button" (click)="deleteTodo(l)">Delete</button>
+  </li>
+ </ul> -->
+
+ <!-- sbs- 26 pass data to child  -->
+<!-- <app-child [item]="count"></app-child> -->
+
+ <!-- sbs- 27 pass data to reusable component  -->
+  <!-- <ul *ngFor="let user of userDetails">
+    <app-child [item]="user"></app-child>
+  </ul> -->
+  
+ <!-- sbs- 28 pass data child to parent component  -->
+ <app-child></app-child>

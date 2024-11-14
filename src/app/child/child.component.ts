@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -9,6 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponent {
 @Input() item:any;
+// @Output() eventUpdateData = new EventEmitter<string>();
 random(){
   this.item = Math.floor(Math.random()*10);
 }

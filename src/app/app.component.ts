@@ -66,4 +66,7 @@ type==="minus"?this.count--:this.count++
     this.todoList.splice(e,1);
     console.log(e);
   }
+  // updateData(item:string){
+  //   console.log(item)
+  // }
 }
